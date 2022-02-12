@@ -1,5 +1,3 @@
-// TODO: ADD LANGUAGE SELECTION
-
 package main
 
 import (
@@ -23,10 +21,12 @@ func main() {
 	var word string
 	var ret int
 	var lang string // tr-en de-en es-en fr-en en
+	var showUrl bool
 
 	flag.StringVar(&word, "w", "", "word for searching")
 	flag.StringVar(&lang, "lang", config.Lang, "which language do you translate")
 	flag.IntVar(&ret, "ret", config.Res, "return word length")
+	flag.BoolVar(&showUrl, "url", false, "show url")
 	flag.Parse()
 
 	if lang == "tr-en" {
@@ -37,9 +37,9 @@ func main() {
 		URL += "spanish-english/"
 	} else if lang == "fr-en" {
 		URL += "french-english/"
-	} else if lang == "en" {
-		URL += "english-synonym/"
-	}
+	} // else if lang == "en" {
+	// URL += "english-synonym/"
+	// }
 
 	if word == "" {
 		fmt.Println("Error: Word Parameter must not be empty")
@@ -75,6 +75,10 @@ func main() {
 
 	for i := 0; i < ret; i++ {
 		fmt.Println(i+1, ": "+words[i])
+	}
+
+	if showUrl {
+		fmt.Printf("\nData got from '%s'\n", URL+word)
 	}
 
 	fmt.Println("\nDone :D")

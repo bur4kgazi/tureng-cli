@@ -15,7 +15,7 @@ $./tureng --help
 
 ## USAGE
 ```bash
-$./tureng -w hello -lang tr-en
+$./tureng -w hello -lang fr-en
 1 : bonjour
 2 : salut
 

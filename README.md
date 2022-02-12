@@ -15,16 +15,10 @@ $./tureng --help
 
 ## USAGE
 
-Usage of ./tureng:
-  -lang string
-    	which language do you translate (default "tr-en")
-  -ret int
-    	return word length (default 2)
-  -url
-    	show url
-  -w string
-    	word for searching
-
+lang string => which language do you translate (default "tr-en")
+ret int     => return word length (default 2)
+url         => show url
+w string    => word for searching
 
 ```bash
 $./tureng -w hello -lang fr-en

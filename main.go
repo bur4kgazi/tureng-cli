@@ -15,8 +15,8 @@ var URL = "https://tureng.com/en/"
 
 func main() {
 
-	config := modules.Get("/home/bur4k/.config/tureng/config")
-
+	config := modules.Get("")
+	
 	// FLAG OPERATIONS
 	var word string
 	var ret int
